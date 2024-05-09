@@ -6,7 +6,7 @@ const fetchBreedDescription = function(breedName, callback) {
       callback('There was a communication error!');
       return;
     }
-    if (response.body === 'INVALID_DATA') {
+    if (body[0] === undefined) {
       callback('There was an error.');
       return;
     }
