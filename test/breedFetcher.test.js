@@ -15,4 +15,10 @@ describe('fetchBreedDescription', () => {
       done();
     });
   });
+  it('return an error', (done) => {
+    fetchBreedDescription('Husky', (err) => {
+      assert.equal(err, 'There was an error.');
+      done();
+    });
+  });
 });
